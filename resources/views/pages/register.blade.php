@@ -1,6 +1,5 @@
 <div>
     @section('title','Registration')
-    @section('icon','register.png')
 
     <section class="flex flex-col md:flex-row h-screen items-center">
 
@@ -15,7 +14,7 @@
             <div class="w-full h-100 mt-3">
 
 
-                <h1 class="text-xl md:text-2xl font-bold text-gray-500 mt-12">Registration to your account </h1> 
+                <h1 class="text-xl md:text-2xl font-bold text-gray-500 mt-12">Login to your account </h1> 
 
                
 
@@ -110,13 +109,13 @@
 
 
 
-                    <button type="submit" class="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
+                    <button type="submit" class="transition duration-500 ease-in-out  transform  hover:scale-95 w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Create New Account</button>
                 </form>
 
                 <hr class="my-6 border-gray-300 w-full">
 
-                <a href=""
+                <a href="{{ route('Login') }}"
                     class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                     <div class="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"

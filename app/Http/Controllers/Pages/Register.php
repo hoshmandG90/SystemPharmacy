@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Pages;
 
 use Livewire\Component;
 use App\Models\User;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Livewire\WithFileUploads;
 
@@ -25,7 +24,7 @@ class Register extends Component
         $this->validateOnly($Field,[
             'username' => 'required|unique:users|alpha_dash|max:10|min:4',
             'name' => 'required|string|max:50',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users|',
             'password' => 'required|max:25|min:8|same:passwordConfirmation',
             'avatars' => 'image|max:8000'
         ]);
@@ -34,7 +33,7 @@ class Register extends Component
         $this->Validate([
          'username' => 'required|unique:users|alpha_dash|max:10|min:4',
          'name' => 'required|string|max:50|',
-         'email' => 'required|email',
+         'email' => 'required|email|unique:users|',
          'password' => 'required|max:25|min:8|same:passwordConfirmation',
          'avatars' => 'image|max:8000'
 
@@ -48,7 +47,7 @@ class Register extends Component
             'username' =>$this->username,
             'name' =>$this->name,
             'email' =>$this->email,
-            'password' =>$this->password,
+            'password' =>Hash::make($this->password),
             'avatars'=>$GetFileUpload,
             
         ]);
@@ -58,6 +57,6 @@ class Register extends Component
     }
     public function render()
     {
-        return view('pages.register');
+        return view('pages.register')->extends('layouts.base');
     }
 }
