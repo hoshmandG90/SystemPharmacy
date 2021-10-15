@@ -1,5 +1,5 @@
 @extends('layouts.base')
 
 @section('content')
-    Hi there
+    <livewire:pages.register/>
 @endsection
