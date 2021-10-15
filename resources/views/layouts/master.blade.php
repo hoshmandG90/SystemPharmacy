@@ -10,13 +10,18 @@
 
     {{--Tailwind-CSS --}}
     <link rel="stylesheet" href="{{asset('assets/css/tailwind.min.css')}}" />
+
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
 
+    
     <link rel="stylesheet" href="{{asset('assets/css/tailwind.output.css')}}" />
+    
 
     {{-- End Tailwind-CSS   --}}
 
-    <link rel="icon" href="{{asset('assets/img/messenger.svg')}}">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="icon" href="{{asset('assets/img/logo.png')}}">
 
 
    

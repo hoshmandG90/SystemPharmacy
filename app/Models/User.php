@@ -23,6 +23,10 @@ class User extends Authenticatable
 
     public $timestamps=true;
 
-  
+
+    
+    public function getAvatarAttribute(){
+        return 'uploads/Photos/'.$this->avatars;
+    }
    
 }

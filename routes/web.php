@@ -18,10 +18,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('/Home', function () {
-    return view('Home');
-})->name('Home');
+Route::get('/Home', function () {return view('Home');})->name('Home');
 
+// Registration form
 Route::get('/Register', App\Http\Controllers\Pages\register::class)->name('register');
 
+
+// Login Page
 Route::get('/Login', App\Http\Controllers\Pages\Login::class)->name('Login');
+
+
+// the Cashier page Insert and view Edit and delete...
+Route::get('/Cashier', App\Http\Controllers\Cashier\Index::class)->name('Cashier');
+Route::get('/Cashier/Create', App\Http\Controllers\Cashier\Create::class)->name('Create');
