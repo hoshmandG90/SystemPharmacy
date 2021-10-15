@@ -9,6 +9,7 @@
     {{-- Tailwind-CSS --}}
     <link rel="stylesheet" href="{{asset('assets/css/tailwind.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="icon" href="{{asset('assets/img/login.png')}}"
 
 
     @livewireScripts  
