@@ -6,9 +6,9 @@
     </a>
     <ul class="mt-6">
         <li class="relative px-6 py-3">
-            <span class="absolute inset-y-2 left-0 w-1 {{request()->is('home') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg' : ''}} "
+            <span class="absolute inset-y-2 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg "
                 aria-hidden="true"></span>
-            <a  href="{{route('home')}}"class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a  href=""class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path
@@ -19,10 +19,10 @@
             </a>
         </li>
         <li class="relative px-6 py-3">
-            <span class="absolute inset-y-0 left-0 w-1 {{request()->is('Explore') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg' : ''}} "
+            <span class="absolute inset-y-0 left-0 w-1 "
                 aria-hidden="true"></span>
             <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="{{route('Explore')}}">
+                href="">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                   </svg>
@@ -41,7 +41,7 @@
             </a>
         </li>
         <li class="relative px-6 py-3">
-            <span class="absolute inset-y-0 left-0 w-1  "
+            <span class="absolute inset-y-0 left-0 w-1 "
                 aria-hidden="true"></span>
             <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="">
@@ -65,9 +65,9 @@
         </li>
 
         <li class="relative px-6 py-3">
-            <span class="absolute inset-y-2 left-0 w-1 {{request()->is('friend') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg' : ''}}"
+            <span class="absolute inset-y-2 left-0 w-1 "
                 aria-hidden="true"></span>
-            <a href="{{route('friend')}}" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a href="" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
                   </svg>
@@ -75,9 +75,9 @@
             </a>
         </li>
         <li class="relative px-6 py-3">
-            <span class="absolute inset-y-0 left-0 w-1 {{request()->is('profile') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg' : ''}}  "
+            <span class="absolute inset-y-0 left-0 w-1   "
                 aria-hidden="true"></span>
-            <a href="{{route('profile',auth()->user()->username)}}" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+            <a href="" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z" clip-rule="evenodd" />
@@ -86,7 +86,6 @@
             </a>
         </li>
 
-        <livewire:admin.logout/>
     </ul>
  
    

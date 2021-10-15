@@ -6,6 +6,9 @@
         width: 45%;
         }
       
+        *{
+          font-family: Arial, Helvetica, sans-serif;
+        }
       
       /* NO NEED THIS CSS - just for custom scrollbar which can also be configured in tailwind.config.js*/
       ::-webkit-scrollbar {

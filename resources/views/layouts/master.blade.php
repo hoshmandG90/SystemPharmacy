@@ -29,7 +29,7 @@
 </head>
 <body>
         
-@auth
+
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
         <!-- Desktop sidebar -->
         <aside class="z-20 hidden w-64    md:block flex-shrink-0">
@@ -78,7 +78,7 @@
         </div>
     </div>
     
-    @endauth
+   
     
   
 
