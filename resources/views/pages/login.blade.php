@@ -14,7 +14,7 @@
             <div class="w-full h-100 mt-3">
 
 
-                <h1 class="text-xl md:text-2xl font-bold text-gray-500 mt-12">Registration to your account </h1> 
+                <h1 class="text-xl md:text-2xl font-bold text-gray-500 mt-12">Login to your account </h1> 
 
                
 

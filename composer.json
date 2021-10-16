@@ -11,7 +11,9 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.6"
+        "livewire/livewire": "^2.6",
+        "php-flasher/flasher-livewire": "^0.6.3",
+        "php-flasher/flasher-notyf-laravel": "^0.6.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

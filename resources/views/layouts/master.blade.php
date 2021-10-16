@@ -69,6 +69,8 @@
 
                     <div class="container ">
                         
+                        @flasher_render <!-- this render all flasher notifications. -->
+                        @flasher_livewire_render <!-- this render livewire notifications only. -->
                         @yield('content')
                       
         

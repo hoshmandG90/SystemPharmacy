@@ -31,3 +31,4 @@ Route::get('/Login', App\Http\Controllers\Pages\Login::class)->name('Login');
 // the Cashier page Insert and view Edit and delete...
 Route::get('/Cashier', App\Http\Controllers\Cashier\Index::class)->name('Cashier');
 Route::get('/Cashier/Create', App\Http\Controllers\Cashier\Create::class)->name('Create');
+Route::get('/Cashier/view', App\Http\Controllers\Cashier\View::class)->name('view');
