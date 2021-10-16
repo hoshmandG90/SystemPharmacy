@@ -47,8 +47,9 @@ class Create extends Component
             'avatars' =>$GetFileUpload
         ]);
         notyf()->livewire()->position('y','top')->addsuccess('created account successfully');
-        return back();
         $this->clear();
+        
+       
         }
 
         private function clear(){
