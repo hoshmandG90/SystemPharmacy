@@ -29,4 +29,11 @@ class User extends Authenticatable
         return '/uploads/Photos/'.$this->avatars;
     }
    
+    public static function search($search){
+        return empty($search) ? static::query() : 
+        static::where('name','LIKE','%'.$search.'%')
+        ->OrWhere('username','LIKE','%'.$search.'%')
+        ->OrWhere('email','LIKE','%'.$search.'%')
+        ->OrWhere('created_at','LIKE','%'.$search.'%');
+    }
 }

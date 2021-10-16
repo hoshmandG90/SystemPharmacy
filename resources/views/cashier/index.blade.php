@@ -1,5 +1,6 @@
 <div>
 
+    @section('title','Show')
 
     <section class="py-6 dark:bg-coolGray-800 dark:text-coolGray-100">
     <div class="flex justify-end">

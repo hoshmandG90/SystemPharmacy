@@ -11,6 +11,7 @@ class View extends Component
     use WithPagination;
 
 
+    public $search;
     public function updatingSearch()
     {
         $this->resetPage();
@@ -29,7 +30,8 @@ class View extends Component
  
     public function render()
     {
-        $Users=User::latest()->Paginate(2);
-        return view('cashier.view',compact('Users'))->extends('layouts.master');
+        $Users=User::search($this->search)->latest()->Paginate(2);
+        $AllCashier=User::count();
+        return view('cashier.view',compact('Users','AllCashier'))->extends('layouts.master');
     }
 }
