@@ -43,4 +43,11 @@ Route::get('/Supplier/View', App\Http\Controllers\Supplier\View::class)->name('V
 
 
 
+// The Buy page insert and view and delete ,Edit...
+Route::get('/Buy', App\Http\Controllers\Buy\Index::class)->name('Buy');
+Route::get('/Buy/Create', App\Http\Controllers\Buy\Create::class)->name('BuyStocks');
+
+
+
+
 
