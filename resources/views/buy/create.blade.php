@@ -22,7 +22,7 @@
                 <span class="border border-purple-200 px-2 py-2 rounded-lg"> Go Back &larr;</span>
     
             </a>
-            <form wire:submit.prevent="store">
+            <form wire:submit.prevent="Store">
                 @csrf
           
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -30,7 +30,7 @@
                 <span class="text-gray-700 dark:text-gray-400">Stock name</span>
                 <input type="text" wire:model.defer="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="stock name">
                 @error('name')
-                <span class="text-red-500 text-xs mt-1 mb-2">{{ $message }}</span>
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
               </label>
     
@@ -52,7 +52,7 @@
                 </div>
     
                 @error('types')
-                <span class="text-red-500 text-xs mt-1 mb-2">{{ $message }}</span>
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
               </div>
     
@@ -60,13 +60,16 @@
                 <span class="text-gray-700 dark:text-gray-400">
                   Supplier name
                 </span>
-                <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                <select wire:model.defer="supplier_id" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                     <option selected> selected  supplier</option>
                     @foreach ($supplier as $sup)
                     <option value="{{ $sup->id }}" >{{ $sup->supplier_name }}</option>
                     @endforeach
                   
                 </select>
+                @error('supplier_id')
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
+                @enderror
               </label>
               <div class="flex  space-x-4">
                 <label class=" text-sm mt-3 mb-2">
@@ -86,12 +89,12 @@
                               $
                             </span>
                           </div>
-                          <input type="number"  id="price" class="block pl-8 w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="0.00">
+                          <input type="number"  wire:model.defer="price"id="price" class="block pl-8 w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="0.00">
                         
                         </div>
                       </div>
                     @error('price')
-                    <span class="text-red-500 text-xs mt-1 mb-2">{{ $message }}</span>
+                    <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                     @enderror
                   </label>
               </div>
@@ -111,7 +114,7 @@
                   </div>
                 </div>
                 @error('expire_date')
-                <span class="text-red-500 text-xs mt-1 mb-2">{{ $message }}</span>
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
               </label>
         
@@ -121,11 +124,11 @@
                 </span>
                 <div class=" mt-3 mb-2">
                   <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
-                    <input wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="1">
+                    <input wire:model.defer="is_debt" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="1">
                     <span class="ml-2">Yes</span>
                   </label>
                   <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
-                    <input  wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="0">
+                    <input  wire:model.defer="is_debt" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="0">
                     <span class="ml-2">No</span>
                   </label>
                  
@@ -133,7 +136,7 @@
                 </div>
     
                 @error('types')
-                <span class="text-red-500 text-xs mt-1 mb-2">{{ $message }}</span>
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
               </div>
     

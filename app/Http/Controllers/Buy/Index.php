@@ -13,6 +13,6 @@ class Index extends Component
     {
         $stocks=Stocks::latest()->With('supplier')->paginate(20);
        
-        return view('buy.index',compact('stocks','supplier'))->extends('layouts.master');
+        return view('buy.index',compact('stocks'))->extends('layouts.master');
     }
 }

@@ -117,7 +117,7 @@
                                 {{ $stock->count }}
                               </td>
                               <td class="px-4 py-3 text-sm">
-                                   {{ $stock->price }}
+                                   {{number_format($stock->price) }} USD
                                  </td>
                                  <td class="px-4 py-3 text-sm">
                                   {{$stock->expire_date->format('m/d/Y') }}
