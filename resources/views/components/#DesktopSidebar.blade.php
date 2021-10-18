@@ -20,13 +20,13 @@
         </li>
 
         <li class="relative px-6 py-3" title="Dashboard">
-            <span class="absolute inset-y-2 left-0 w-1  "
+            <span class="absolute inset-y-2 left-0 w-1 {{ request()->is('Dashboard') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }} "
                 aria-hidden="true"></span>
-            <a  href=""class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a  href="{{ route('Dashboard') }}" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                <span class="ml-4">dashboard</span>
+                <span class="ml-4">Dashboard</span>
             </a>
         </li>
 
@@ -49,7 +49,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span class="ml-4 text-red-500">Expire Products</span>
+                <span class="ml-4 ">Expire Products</span>
             </a>
         </li>
 

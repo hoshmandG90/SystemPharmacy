@@ -65,5 +65,10 @@ Route::get('/DebtList', App\Http\Controllers\DebtList::class)->name('DebtList');
 
 
 
+// The Dashboard Page displays
+Route::get('/Dashboard', App\Http\Controllers\Admin\Dashboard::class)->name('Dashboard');
+
+
+
 
 
