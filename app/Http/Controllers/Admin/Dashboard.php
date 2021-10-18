@@ -13,7 +13,12 @@ class Dashboard extends Component
     {
 
 
-         $solds=Sold::latest()->paginate(10);
-        return view('admin.dashboard',compact('solds'))->extends('layouts.master');
+         $solds=Sold::where('clean',true)->latest()->paginate(10);
+         $AllQuantity=sold::sum('quantity');
+         $Cashier =sold::all();
+         $uniqueCasiher=$Cashier->unique('user_id')->count();
+        
+      
+        return view('admin.dashboard',compact('solds','AllQuantity','uniqueCasiher'))->extends('layouts.master');
     }
 }
