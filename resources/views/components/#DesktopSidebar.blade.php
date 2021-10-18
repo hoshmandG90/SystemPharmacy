@@ -37,27 +37,27 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
-                <span class="ml-4 {{ request()->is('Buy') ? 'dark:text-gray-400 text-gray-500' : '' }}">Buy</span>
+                <span class="ml-4 ">Buy</span>
             </a>
         </li>
 
         <li class="relative px-6 py-3" title="Dashboard">
-            <span class="absolute inset-y-2 left-0 w-1  "
+            <span class="absolute inset-y-2 left-0 w-1 {{ request()->is('ExpireStock') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg':''}}  "
                 aria-hidden="true"></span>
-            <a  href=""class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a  href="{{ route('ExpireStock') }}" class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span class="ml-4">Expire Products</span>
+                <span class="ml-4 text-red-500">Expire Products</span>
             </a>
         </li>
 
         
         <li class="relative px-6 py-3" title="Dashboard">
-            <span class="absolute inset-y-2 left-0 w-1  "
+            <span class="absolute inset-y-2 left-0 w-1  {{ request()->is('DebtList') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg':'' }} "
                 aria-hidden="true"></span>
-            <a  href=""class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a  href="{{ route('DebtList') }}"class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
                   </svg>
@@ -67,9 +67,9 @@
 
 
         <li class="relative px-6 py-3" title="Dashboard">
-            <span class="absolute inset-y-2 left-0 w-1  "
+            <span class="absolute inset-y-2 left-0 w-1   {{ request()->is('NotLeft') ? 'bg-purple-600 rounded-tr-lg rounded-br-lg':'' }} "
                 aria-hidden="true"></span>
-            <a  href=""class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
+            <a  href="{{ route('NotLeft') }}"class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -147,7 +147,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                <span class="ml-4 {{ request()->is('Cashier') ? 'dark:text-gray-400 text-gray-500' : '' }} ">Cashier</span>
+                <span class="ml-4  ">Cashier</span>
             </a>
         </li>
 
@@ -159,7 +159,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                <span class="ml-4 {{ request()->is('Supplier') ? 'dark:text-gray-400 text-gray-500' : '' }}">Supplier</span>
+                <span class="ml-4 ">Supplier</span>
             </a>
         </li>
        

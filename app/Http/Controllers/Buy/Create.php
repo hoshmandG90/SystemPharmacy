@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Buy;
 
 use Livewire\Component;
 use App\Models\supplier;
-use App\Models\Stocks;
+use App\Models\Stock;
 class Create extends Component
 {
 
@@ -28,7 +28,7 @@ class Create extends Component
             'is_debt' => 'required'
         ]);
 
-        Stocks::create($Validation_Data);
+        Stock::create($Validation_Data);
         notyf()->livewire()->position('y','top')->addSuccess('added stock  successfully');
         $this->clear();
         return back();

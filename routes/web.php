@@ -46,6 +46,22 @@ Route::get('/Supplier/View', App\Http\Controllers\Supplier\View::class)->name('V
 // The Buy page insert and view and delete ,Edit...
 Route::get('/Buy', App\Http\Controllers\Buy\Index::class)->name('Buy');
 Route::get('/Buy/Create', App\Http\Controllers\Buy\Create::class)->name('BuyStocks');
+Route::get('/Buy/{stock:name}/Edit', App\Http\Controllers\Buy\Edit::class)->name('EditStocks');
+
+
+
+
+// The Expire stock displays
+Route::get('/ExpireStock', App\Http\Controllers\ExpireStock::class)->name('ExpireStock');
+
+// The NotLeft page displays
+Route::get('/NotLeft', App\Http\Controllers\NotLeft::class)->name('NotLeft');
+
+
+// The DebtList Page displays
+Route::get('/DebtList', App\Http\Controllers\DebtList::class)->name('DebtList');
+
+
 
 
 
