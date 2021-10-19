@@ -10,6 +10,7 @@ class Create extends Component
 
 
 
+    public $barcode;
     public $name;
     public $types;
     public $count;
@@ -17,6 +18,7 @@ class Create extends Component
     public $is_debt;
     public $supplier_id;
     public $expire_date;
+    
     public function Store(){
        $Validation_Data= $this->Validate([
             'name' => 'required',
@@ -28,7 +30,16 @@ class Create extends Component
             'is_debt' => 'required'
         ]);
 
-        Stock::create($Validation_Data);
+        Stock::create([
+            'id'=>$this->barcode,
+            'name'=>$this->name,
+            'types' =>$this->types,
+            'price' =>$this->price,
+            'count' =>$this->count,
+            'is_debt' =>$this->is_debt,
+            'supplier_id'=>$this->supplier_id,
+            'expire_date' =>$this->expire_date,
+        ]);
         notyf()->livewire()->position('y','top')->addSuccess('added stock  successfully');
         $this->clear();
         return back();

@@ -27,6 +27,14 @@
           
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
               <label class="block text-sm  mt-3 mb-2">
+                <span class="text-gray-700 dark:text-gray-400">Barcode Stock</span>
+                <input type="text" wire:model.defer="id" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Code Barcode">
+                @error('id')
+                <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
+                @enderror
+              </label>
+
+              <label class="block text-sm  mt-3 mb-2">
                 <span class="text-gray-700 dark:text-gray-400">Stock name</span>
                 <input type="text" wire:model.defer="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="stock name">
                 @error('name')

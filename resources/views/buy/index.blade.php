@@ -96,6 +96,7 @@
                           <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                             <th class="px-4 py-3">supplier name</th>
                             <th class="px-4 py-3">stock name</th>
+                            <th class="px-4 py-3">Barcode</th>
                             <th class="px-4 py-3">Types</th>
                             <th class="px-4 py-3">count</th>
                             <th class="px-4 py-3">price</th>
@@ -126,9 +127,13 @@
                                   </div>
                                 </div>
                               </td>
+                              <td class="px-4 py-3 text-sm text-center">
+                                {{ $stock->id }}
+                              </td>
                               <td class="px-4 py-3 text-sm">
                                 {{ $stock->name }}
                               </td>
+                             
                               <td class="px-4 py-3 text-xs">
                                    @if ($stock->types == 1)
                                    <span class="px-4 py-2 font-semibold leading-tight text-gray-700 bg-gray-100 rounded-lg dark:text-gray-100 dark:bg-gray-700">
@@ -142,7 +147,7 @@
                                    @endif
                              
                               </td>
-                              <td class="px-4 py-3 text-sm">
+                              <td class="px-4 py-3 text-sm text-center">
                                 {{ $stock->count }}
                               </td>
                               <td class="px-4 py-3 text-sm">
