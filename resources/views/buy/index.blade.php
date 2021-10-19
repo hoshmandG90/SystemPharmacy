@@ -95,8 +95,8 @@
                         <thead>
                           <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                             <th class="px-4 py-3">supplier name</th>
-                            <th class="px-4 py-3">stock name</th>
                             <th class="px-4 py-3">Barcode</th>
+                            <th class="px-4 py-3">stock name</th>
                             <th class="px-4 py-3">Types</th>
                             <th class="px-4 py-3">count</th>
                             <th class="px-4 py-3">price</th>
@@ -128,7 +128,7 @@
                                 </div>
                               </td>
                               <td class="px-4 py-3 text-sm text-center">
-                                {{ $stock->id }}
+                                {!! DNS1D::getBarcodeSVG("$stock->id", 'EAN13',1,43,'#BDC9C9', true) !!}
                               </td>
                               <td class="px-4 py-3 text-sm">
                                 {{ $stock->name }}

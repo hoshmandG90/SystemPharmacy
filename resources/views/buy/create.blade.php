@@ -26,17 +26,18 @@
                 @csrf
           
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+
               <label class="block text-sm  mt-3 mb-2">
                 <span class="text-gray-700 dark:text-gray-400">Barcode Stock</span>
-                <input type="text" wire:model.defer="id" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Code Barcode">
-                @error('id')
+                <input type="text" wire:model.defer="barcode" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Barcode Code...">
+                @error('barcode')
                 <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
               </label>
 
               <label class="block text-sm  mt-3 mb-2">
                 <span class="text-gray-700 dark:text-gray-400">Stock name</span>
-                <input type="text" wire:model.defer="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="stock name">
+                <input type="text" wire:model.defer="name" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Stock Name">
                 @error('name')
                 <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
@@ -48,11 +49,11 @@
                 </span>
                 <div class=" mt-3 mb-2">
                   <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
-                    <input wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="1">
+                    <input wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"  value="1">
                     <span class="ml-2">Even</span>
                   </label>
                   <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
-                    <input  wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" name="accountType" value="0">
+                    <input  wire:model.defer="types" type="radio" class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"  value="0">
                     <span class="ml-2">Odd</span>
                   </label>
                  

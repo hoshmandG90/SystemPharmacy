@@ -18,8 +18,10 @@ class Edit extends Component
     public $Newis_debt;
     public $Newsupplier_id;
     public $Newexpire_date;
+    public $Newbarcode;
 
     public function mount(stock $stock){
+        $this->Newbarcode = $stock->id;
         $this->Newstock = $stock;
         $this->Newname = $stock->name;
         $this->Newcount = $stock->count;
@@ -32,6 +34,7 @@ class Edit extends Component
 
     public function EditStock(stock $stock){
         $Validation_Data= $this->Validate([
+            'Newbarcode' =>'required',
             'Newname' => 'required',
             'Newprice' => 'required',
             'Newtypes' => 'required',
@@ -42,6 +45,7 @@ class Edit extends Component
         ]);
 
         $stock->update([
+            'id'=>$this->Newbarcode,
             'name'=>$this->Newname,
             'count'=>$this->Newcount,
             'price'=>$this->Newprice,
