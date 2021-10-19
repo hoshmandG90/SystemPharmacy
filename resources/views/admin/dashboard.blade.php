@@ -28,7 +28,7 @@
                         </svg>
                     </div>
                     <div class="flex items-center justify-between flex-1 p-3">
-                        <p class="text-2xl font-semibold">7 500+</p>
+                        <p class="text-2xl font-semibold">{{ number_format($AllMoney) }} USD</p>
                         <p>All Money</p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         </svg>
                     </div>
                     <div class="flex items-center justify-between flex-1 p-3">
-                        <p class="text-2xl font-semibold">24/7 h</p>
+                        <p class="text-2xl font-semibold">{{ number_format($AllMoneyToday*$AllQuantityToday) }} USD</p>
                         <p>All Money Today</p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         </svg>
                     </div>
                     <div class="flex items-center justify-between flex-1 p-3">
-                        <p class="text-2xl font-semibold">99,9 %</p>
+                        <p class="text-2xl font-semibold">{{ $AllQuantityToday }}</p>
                         <p>All Quantity Toady</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                           </svg>
                     </div>
                     <div class="flex items-center justify-between flex-1 p-3">
-                        <p class="text-2xl font-semibold">720 L</p>
+                        <p class="text-2xl font-semibold">{{ $Expire_count }}</p>
                         <p>Expire Products</p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
           <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
             <nav aria-label="Table navigation">
               <ul class="inline-flex items-center">
-                 Pagination
+                 {{ $solds->links() }}
               </ul>
             </nav>
           </span>
