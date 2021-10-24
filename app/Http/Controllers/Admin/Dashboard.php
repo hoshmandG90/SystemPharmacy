@@ -11,6 +11,15 @@ class Dashboard extends Component
 {
 
     use WithPagination;
+
+
+
+    public function DeleteRow($id){
+        sold::FindOrFail($id)->delete();
+        notyf()->livewire()->position('y','top')->addError("the row has been deleted");
+        return back();
+
+    }
     public function render()
     {
 
@@ -26,17 +35,24 @@ class Dashboard extends Component
          $uniqueCasiher=$Cashier->where('clean',true)->unique('user_id')->count();
          
 
-         $AllMoney=sold::where('clean',true)->sum('price_at');
-         $AllMoneyToday=sold::whereBetween('created_at',[now()->today(),now()])->sum('price_at');
+         
 
 
 
          $Expire_count=Stock::where('expire_date','<=',Carbon::Today())->count();
       
 
-      
          
       
-        return view('admin.dashboard',compact('solds','AllQuantity','uniqueCasiher','AllMoney','Expire_count','AllMoneyToday','AllQuantityToday'))->extends('layouts.master');
+           // The sum of all the money that is in the store
+           $sum_solds=sold::where('clean',true)->latest()->get();
+
+           //  List all the items sold today
+
+           $sum_solds_today=sold::where('clean',true)->whereBetween('created_at',[now()->today(),now()])->get();
+
+         
+      
+        return view('admin.dashboard',compact('sum_solds_today','sum_solds','solds','AllQuantity','uniqueCasiher','Expire_count','AllQuantityToday'))->extends('layouts.master');
     }
 }

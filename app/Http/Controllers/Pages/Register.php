@@ -18,6 +18,7 @@ class Register extends Component
     public $password;
     public $passwordConfirmation;
     public $avatars;
+    
 
 
     public function updated($Field){

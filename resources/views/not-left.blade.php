@@ -76,7 +76,7 @@
                                </div>
                              </td>
                              <td class="px-4 py-3 text-sm text-center">
-                              {!! DNS1D::getBarcodeSVG("$stock->id", 'EAN13',1,43,'#BDC9C9', true) !!}
+                              {!! DNS1D::getBarcodeSVG("$stock->id", 'EAN13',1,33,'#BDC9C9', true) !!}
                             </td>
                              
                              <td class="px-4 py-3 text-sm">

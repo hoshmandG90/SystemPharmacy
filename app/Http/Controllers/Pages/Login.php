@@ -31,7 +31,7 @@ class Login extends Component
 
         if(\Auth::attempt(['username' => $this->username, 'password' => $this->password])){
 
-            return redirect()->to(route('Home'));
+            return redirect()->to(route('Cashier'));
         }else{
           $this->check="the username and password dose not match";
         }

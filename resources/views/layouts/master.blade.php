@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title')</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+   
 
     {{--Tailwind-CSS --}}
     <link rel="stylesheet" href="{{asset('assets/css/tailwind.min.css')}}" />
@@ -67,7 +66,7 @@
                   
 
 
-                    <div class="container ">
+                    <div class="container">
                         
                         @flasher_render <!-- this render all flasher notifications. -->
                         @flasher_livewire_render <!-- this render livewire notifications only. -->
@@ -75,7 +74,7 @@
                       
         
                        </div>
-                    <!-- CTA Containers AND Main section To The Master Layout -->
+                  
                   
                    
                 </div>
@@ -86,12 +85,30 @@
     </div>
     
    
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+    <script>
+        $(".sound").on("click", function(){
+           var object=document.createElement("audio");
+           object.src ='assets/audio/undo.mp3';
+           object.play();
+        });
+        $(".cashed").on("click", function(){
+           var object=document.createElement("audio");
+           object.src ='assets/audio/beep.mp3';
+           object.play();
+        });
+        
+    </script>    
     
+
+
   
 
     <script src="{{asset('assets/js/init-alpine.js')}}"></script>
     <script src="{{asset('assets/js/alpine.min.js')}}"></script>
-    
+
+  
+     
 </body>
 
 </html>

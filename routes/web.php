@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/Home', function () {return view('Home');})->name('Home');
 
 // Registration form
 Route::get('/Register', App\Http\Controllers\Pages\register::class)->name('register');
@@ -67,6 +66,24 @@ Route::get('/DebtList', App\Http\Controllers\DebtList::class)->name('DebtList');
 
 // The Dashboard Page displays
 Route::get('/Dashboard', App\Http\Controllers\Admin\Dashboard::class)->name('Dashboard');
+Route::get('/Profile/{user:username}', App\Http\Controllers\Admin\Profile::class)->name('Profile');
+Route::get('/Notifications', App\Http\Controllers\Admin\Notifications::class)->name('Notifications');
+
+
+
+// Sale Products Page displays
+
+Route::get('/SaleProducts', App\Http\Controllers\SaleProducts::class)->name('SaleProducts');
+
+
+Route::get('/invoice', App\Http\Controllers\Invoice::class)->name('Invoice');
+
+
+Route::get('/Receipt', App\Http\Controllers\BigInvoices::class)->name('Receipt');
+
+
+
+
 
 
 

@@ -29,7 +29,7 @@
 
               <label class="block text-sm  mt-3 mb-2">
                 <span class="text-gray-700 dark:text-gray-400">Barcode Stock</span>
-                <input type="text" wire:model.defer="barcode" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Barcode Code...">
+                <input autofocus type="text" wire:model.defer="barcode" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Barcode Code...">
                 @error('barcode')
                 <span class="text-red-500 text-xs mt-2 mb-2">{{ $message }}</span>
                 @enderror
